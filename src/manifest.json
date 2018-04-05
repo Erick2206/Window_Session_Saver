@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "Window Session Saver",
+  "version": "1.0",
+
+  "description": "Saves the window tabs so that they could be used later.",
+
+  "icons": {
+
+    "48": "need a icon"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["save.js"]
+    }
+  ]
+
+}
