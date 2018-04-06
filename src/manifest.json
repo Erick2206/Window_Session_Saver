@@ -1,21 +1,28 @@
 {
 
-  "manifest_version": 2,
-  "name": "Window Session Saver",
-  "version": "1.0",
+ 	 "manifest_version": 2,
+  	 "name": "Window Session Saver",
+  	 "version": "1.0",
 
-  "description": "Saves the window tabs so that they could be used later.",
+  	 "description": "Saves the window tabs so that they could be used later.",
 
-  "icons": {
-
-    "48": "icons/session-saver.png"
-  },
-
-  "content_scripts": [
-    {
-      "matches": ["*"],
-      "js": ["save.js"]
-    }
-  ]
+  	"icons":{
+			"48":"icons/session_saver_icon.png" 
+		},		
+  
+	
+  	 "content_scripts": [
+  	 	 {
+     		 "matches": ["*://*/"],
+     		 "js": ["save.js"]
+   	 	 }
+ 	 ],
+	
+	"browser_action":{
+		"default_icon":{
+			"48":"icons/session_saver_icon.png"
+		},
+		"default_title":"SessionSaver"
+	}
 
 }
