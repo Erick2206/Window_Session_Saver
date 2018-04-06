@@ -24,8 +24,8 @@
 
   "content_scripts": [
     {
-      "matches": ["*"],
+      "matches": ["*://*/"],
       "js": ["save.js"]
     }
-
+]	
 }
