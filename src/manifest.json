@@ -9,7 +9,7 @@
 
   "icons": {
 
-    "48": "icons/session-saver.png"
+    "48": "icons/session_saver_icon.png"
   },
 
   "permissions": [
@@ -17,7 +17,7 @@
     ],
 
   "browser_action": {
-      "default_icon": "icons/session-saver.png",
+      "default_icon": "icons/session_saver_icon.png",
       "default_title": "Session Saver",
       "default_popup": "popup/save_extension.html"
       },
