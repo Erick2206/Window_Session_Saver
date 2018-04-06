@@ -8,7 +8,7 @@
 
   "icons": {
 
-    "48": "need a icon"
+    "48": "icons/session-saver.png"
   },
 
   "content_scripts": [
