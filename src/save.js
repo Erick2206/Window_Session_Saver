@@ -28,5 +28,7 @@ function display(data){
 	}
 }
 //onclick action , savDB function is called
+browser.browserAction.onClicked.addListener(saveDB);
 
-browser.browseAction.onclicked.addListener(saveDB);
+
+

@@ -18,14 +18,12 @@
 
   "browser_action": {
       "default_icon": "icons/session_saver_icon.png",
-      "default_title": "Session Saver",
-      "default_popup": "popup/save_extension.html"
+      "default_title": "Session Saver"
       },
 
-  "content_scripts": [
-    {
-      "matches": ["*://*/"],
-      "js": ["save.js"]
-    }
-]	
+ "background": {
+    "scripts": ["save.js"]
+	}
+
+	
 }
