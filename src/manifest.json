@@ -13,7 +13,9 @@
   },
 
   "permissions": [
-      "tabs"
+      "*://developer.mozilla.org/*",
+      "tabs",
+      "storage"
     ],
 
   "browser_action": {
@@ -27,5 +29,5 @@
       "matches": ["*://*/"],
       "js": ["save.js"]
     }
-]	
+]
 }
