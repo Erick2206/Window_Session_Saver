@@ -20,13 +20,9 @@
 
   "browser_action": {
       "default_icon": "icons/session_saver_icon.png",
-      "default_title": "Session Saver"
-      },
+      "default_title": "Session Saver",
+      "default_popup": "popup/save_extension.html",
+      "browser_style": true
+    },
 
-  "content_scripts": [
-    {
-      "matches": ["*://*/"],
-      "js": ["save.js"]
-    }
-]
 }
