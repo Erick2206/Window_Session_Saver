@@ -1,31 +1,20 @@
-// tablist for currentTabs
-var tabList;
 
-// saveDB for handling tabs , and saving it on local storage
-function saveDB(){
+var btn = document.getElementById('bttn');
+var text = document.getElementById('input');
 
-	strList = window.localStorage;
-
-	tablist = browser.tabs.query(
-		{
-		currentWindow:true
-		}
-	);
-	console.log('da')
-	console.log(tablist);
-	//strList.setItem();
-		
-	//display(strList);
-}
-//for popup with data stored in localstorage
-
-function display(data){
-	if(data.length == 0){
-
-	}
-	else{
-
+function saveTabs(tabs,f){
+	for(let tab in tabs){
+		console.log(tab.url);
 	}
 }
-//onclick action , savDB function is called
-browser.browserAction.onClicked.addListener(saveDB);
+
+function getTabs(){
+	return browser.tabs.query({currentWindow:true,active:true});
+}
+
+function main(){
+	console.log('da');
+	var flag = txt.value;
+	getTabs().then(saveTabs,flag);
+}
+
