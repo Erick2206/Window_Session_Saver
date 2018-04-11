@@ -4,7 +4,6 @@ function setItem(){
 	console.log('ok');
 }
 
-
 function saveTabs(tabs){
 	
 	var arr = new Array;
@@ -26,21 +25,23 @@ function getTabs(){
 	//console.log('in')
 	tabList.then(saveTabs)
 }
+function updateList(data){
+	var ul = document.getElementById("list");
+	flag=document.querySelector('#input').value	
+	var btn = document.createElement("BUTTON");
+	btn.appendChild(document.createTextNode(flag));
+	ul.appendChild(btn);	
+}
 
 function getList(){
-	var ul = document.getElementById("list");
-	
-	for(var key in KeyPair){
-  		var li = document.createElement("li");
-  		li.appendChild(document.createTextNode(key));
-  		ul.appendChild(li);
-	}		
+	//ul.innerHTML="";
+	browser.storage.local.get().then(updateList);			
 }
 
 function main(){
 	//console.log(flag)
 	getTabs()
-	//getList()
+	getList()
 }
 
 

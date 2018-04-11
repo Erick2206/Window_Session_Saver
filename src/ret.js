@@ -4,9 +4,9 @@ function update(data){
 	console.log(data);
 	if(!data.KeyPair){	
 		for(var key in data){
-			var li = document.createElement("li");
-			li.appendChild(document.createTextNode(key));
-			ul.appendChild(li);
+			var btn= document.createElement("BUTTON");
+			btn.appendChild(document.createTextNode(key));
+			ul.appendChild(btn);
 		}}
 }
 
