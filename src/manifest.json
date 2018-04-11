@@ -21,13 +21,8 @@
   "browser_action": {
       "default_icon": "icons/session_saver_icon.png",
       "default_title": "Session Saver",
-<<<<<<< HEAD
       "default_popup": "popup/save_extension.html",
       "browser_style": true
-    },
-=======
-      "default_popup": "popup/save_extension.html"
-      },
->>>>>>> 2a5829d1c0508c57b4d387e86aea0f2690f18470
+    }
 
 }
