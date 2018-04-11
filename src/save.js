@@ -40,7 +40,9 @@ function getList(){
 function main(){
 	//console.log(flag)
 	getTabs()
-	getList()
+	//getList()
 }
+
+
 
 document.querySelector('#bttn').addEventListener('click',main)
