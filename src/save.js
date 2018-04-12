@@ -27,9 +27,13 @@ function saveTabs(tabs){
 	}
 
 	flag=document.querySelector('#input').value
-	KeyPair[flag] = arr;
-	console.log(KeyPair);	
-	browser.storage.local.set({KeyPair}).then(setItem);	
+	KeyPair[flag] = arr;	
+	browser.storage.local.set({KeyPair}).then(setItem);
+	browser.storage.local.get().then(
+		function(data){
+			console.log(data.KeyPair);
+		}
+	);	
 }
 
 function getTabs(){
@@ -54,13 +58,10 @@ function updateList(){
 function getList(key){
 	browser.storage.local.get().then(
 		function(data){
-			var arr = data.key;
-			if(arr.length > 0){
-				var creating = browser.windows.create({	
-					url: arr				
-				});
-				creating.then(onCreate,onError);					
-			}
+			var arr = new Array 
+			arr=data.KeyPair.key;
+			console.log(data.KeyPair);
+			
 		}
 	);					
 }
