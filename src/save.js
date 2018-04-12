@@ -1,19 +1,31 @@
-
 var KeyPair = {};
+
+function reloadTabs(){
+	var key=this.id;
+	getList(key);
+}
+//function to check the entry of data in storage
+function onCreated(windowInfo) {
+  console.log(`Created window: ${windowInfo.id}`);
+}
+
+function onError(error) {
+  console.log(`Error: ${error}`);
+}
 function setItem(){
 	console.log('ok');
 }
-
+//Array of Tabs is stored as Key-Pair 
 function saveTabs(tabs){
 	
 	var arr = new Array;
 	let i=0;
-	//console.log(tabs[1].url);
-	while(i<tabs.length){
-		//console.log(tabs[i].url);
+	
+	while(i<tabs.length){		
 		arr.push(tabs[i].url);
 		i+=1;	
 	}
+
 	flag=document.querySelector('#input').value
 	KeyPair[flag] = arr;
 	console.log(KeyPair);	
@@ -22,28 +34,40 @@ function saveTabs(tabs){
 
 function getTabs(){
 	var tabList =  browser.tabs.query({currentWindow:true})
-	//console.log('in')
 	tabList.then(saveTabs)
 }
-function updateList(data){
+
+function updateList(){
 	var ul = document.getElementById("list");
 	flag=document.querySelector('#input').value	
 	var btn = document.createElement("BUTTON");
+	
+	// code to add button with ID as Name entered by User
+	//  Onclick : Reload function is called to Load arrays
 	btn.appendChild(document.createTextNode(flag));
-	ul.appendChild(btn);	
+	btn.id = flag;
+	btn.onclick = reloadTabs;
+	ul.appendChild(btn);
+		
 }
 
-function getList(){
-	//ul.innerHTML="";
-	browser.storage.local.get().then(updateList);			
+function getList(key){
+	browser.storage.local.get().then(
+		function(data){
+			var arr = data.key;
+			if(arr.length > 0){
+				var creating = browser.windows.create({	
+					url: arr				
+				});
+				creating.then(onCreate,onError);					
+			}
+		}
+	);					
 }
 
 function main(){
-	//console.log(flag)
 	getTabs()
-	getList()
+	updateList()
 }
-
-
 
 document.querySelector('#bttn').addEventListener('click',main)
