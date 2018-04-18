@@ -1,13 +1,19 @@
 
 function update(data){
-	var ul=document.getElementById('list');
-	console.log(data);
-	if(!data.KeyPair){	
-		for(var key in data){
-			var btn= document.createElement("BUTTON");
+	var ul=document.getElementById('list');	
+	try {
+		obj = data.KeyPair;
+		for(let key in obj){
+			var btn = document.createElement("BUTTON");
 			btn.appendChild(document.createTextNode(key));
+			btn.id = key;
+			btn.onclick = reloadTabs;
 			ul.appendChild(btn);
-		}}
+		}
+	}
+	catch(e){
+		console.log(e);
+	}	
 }
 
 browser.storage.local.get().then(update);

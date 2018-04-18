@@ -21,9 +21,11 @@ function saveTabs(tabs){
 	var arr = new Array;
 	let i=0;
 	
-	while(i<tabs.length){		
-		arr.push(tabs[i].url);
-		i+=1;	
+	while(i<tabs.length){
+		if(tabs[i].url != ''){		
+			arr.push(tabs[i].url);
+			i+=1;
+		}	
 	}
 
 	flag=document.querySelector('#input').value;
@@ -36,10 +38,6 @@ function saveTabs(tabs){
 function getTabs(){
 	var tabList =  browser.tabs.query({currentWindow:true})
 	tabList.then(saveTabs)
-}
-
-function unique(flag){
-		
 }
 
 function updateList(){
@@ -61,7 +59,7 @@ function getList(data){
 		try{
 			
 			obj = data.KeyPair;
-			console.log(key.valueOf());				
+			//console.log(key.valueOf());				
 			urlArr	= obj[key.valueOf()];
 			var creating = browser.windows.create({
     				url: urlArr
