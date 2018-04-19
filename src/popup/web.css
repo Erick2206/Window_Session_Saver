@@ -1,24 +1,33 @@
 .container{
 	width:300px;
 	height:300px;
+
 }
 .addBar{
-	width: 50%;
-  	margin: 0 auto;
+	width: 65%;
+padding: 10px 10px;
+	margin: 0 auto;
+	float:left;
+	display: inline-block;
+
 }
 #input{
 	width: 100%;
   	margin: 0 auto;
+		display: inline-block;
+
 }
 .click{
-	width: 50%;
-  	margin-top:20px;
-  	margin-left:115px;
+	width: 35%;
+  	margin-top:5px;
+/*  	margin-left:10px;
+*/		float: right;
+
 }
 .popup-content{
 	width:80px;
-	padding-top:8px;	
-	
+	padding-top:8px;
+
 }
 #create{
 	width:80px;
@@ -28,9 +37,10 @@
     background-color: DodgerBlue; /* Blue background */
     border: none; /* Remove borders */
     color: white; /* White text */
-    padding: 12px 16px; /* Some padding */	
+    padding: 12px 16px; /* Some padding */
     font-size: 16px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
-    width:50%;
+    width:80%;
     margin:0 auto;
+		height: 10%;
 }
