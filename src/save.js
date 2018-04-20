@@ -1,3 +1,5 @@
+
+// Developer : RPzinga
 var KeyPair = {};
 var key;
 function reloadTabs(){
