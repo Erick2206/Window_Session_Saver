@@ -18,12 +18,26 @@ function setItem(){
 	console.log('ok');
 }
 //Array of Tabs is stored as Key-Pair
+function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
 function tabStore(tabList){
-	obj=tabList.KeyPair;
-	flag=document.querySelector('#input').value;
-	obj[flag]=KeyPair[flag];
-	KeyPair=obj;
-	browser.storage.local.set({KeyPair}).then(setItem);
+
+	if(!isEmpty(tabList)){
+		obj=tabList.KeyPair;		
+		flag=document.querySelector('#input').value;
+		obj[flag]=KeyPair[flag];
+		KeyPair=obj;
+		browser.storage.local.set({KeyPair}).then(setItem);		
+		browser.storage.local.set({KeyPair}).then(setItem);	
+	}
+	else{
+		browser.storage.local.set({KeyPair}).then(setItem);	
+	}
 }
 function saveTabs(tabs){
 
