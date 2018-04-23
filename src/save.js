@@ -18,6 +18,12 @@ function setItem(){
 	console.log('ok');
 }
 //Array of Tabs is stored as Key-Pair
+function tabStore(tabList){
+	if(tabList.KeyPair){
+		browser.storage.local.set({KeyPair}).then(setItem);
+	}
+	
+}
 function saveTabs(tabs){
 
 	var arr = new Array;
@@ -33,8 +39,10 @@ function saveTabs(tabs){
 	flag=document.querySelector('#input').value;
 	//console.log(typeof(flag));
 	KeyPair[flag] = arr;
-	browser.storage.local.set({KeyPair}).then(setItem);
-
+	
+	const gettingStoredSettings = browser.storage.local.get();
+	gettingStoredSettings.then(tabStore, onError);	
+	
 }
 
 function getTabs(){
