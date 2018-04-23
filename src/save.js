@@ -19,10 +19,11 @@ function setItem(){
 }
 //Array of Tabs is stored as Key-Pair
 function tabStore(tabList){
-	if(tabList.KeyPair){
-		browser.storage.local.set({KeyPair}).then(setItem);
-	}
-	
+	obj=tabList.KeyPair;
+	flag=document.querySelector('#input').value;
+	obj[flag]=KeyPair[flag];
+	KeyPair=obj;
+	browser.storage.local.set({KeyPair}).then(setItem);
 }
 function saveTabs(tabs){
 

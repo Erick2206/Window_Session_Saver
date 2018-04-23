@@ -1,6 +1,7 @@
 
 function update(data){
 	var ul=document.getElementById('list');	
+	console.log(data);
 	try {
 		obj = data.KeyPair;
 		for(let key in obj){
