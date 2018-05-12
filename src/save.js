@@ -28,15 +28,15 @@ function isEmpty(obj) {
 function tabStore(tabList){
 
 	if(!isEmpty(tabList)){
-		obj=tabList.KeyPair;		
+		obj=tabList.KeyPair;
 		flag=document.querySelector('#input').value;
 		obj[flag]=KeyPair[flag];
 		KeyPair=obj;
-		browser.storage.local.set({KeyPair}).then(setItem);		
-		browser.storage.local.set({KeyPair}).then(setItem);	
+		browser.storage.local.set({KeyPair}).then(setItem);
+		browser.storage.local.set({KeyPair}).then(setItem);
 	}
 	else{
-		browser.storage.local.set({KeyPair}).then(setItem);	
+		browser.storage.local.set({KeyPair}).then(setItem);
 	}
 }
 function saveTabs(tabs){
@@ -51,13 +51,13 @@ function saveTabs(tabs){
 		}
 	}
 
-	flag=document.querySelector('#input').value;
+	flag=document.querySelector('#textBox').value;
 	//console.log(typeof(flag));
 	KeyPair[flag] = arr;
-	
+
 	const gettingStoredSettings = browser.storage.local.get();
-	gettingStoredSettings.then(tabStore, onError);	
-	
+	gettingStoredSettings.then(tabStore, onError);
+
 }
 
 function getTabs(){
@@ -67,15 +67,18 @@ function getTabs(){
 
 function updateList(){
 	var ul = document.getElementById("list");
-	flag=document.querySelector('#input').value
+	var li = document.createElement("li");
+	flag=document.querySelector('#textBox').value
 	if(!document.getElementById(flag.valueOf())){
 		var btn = document.createElement("BUTTON");
 		// code to add button with ID as Name entered by User
 		//  Onclick : Reload function is called to Load arrays
 		btn.appendChild(document.createTextNode(flag));
+		btn.classList.add("flag");
 		btn.id = flag;
 		btn.onclick = reloadTabs;
-		ul.appendChild(btn);
+		li.appendChild(btn);
+		ul.appendChild(li);
 	}
 }
 
@@ -106,7 +109,7 @@ function main(){
 document.querySelector('#bttn').addEventListener('click',main)
 
 // Get the input field
-var input = document.getElementById("input");
+var input = document.getElementById("textBox");
 
 // Execute a function when the user releases a key on the keyboard
 input.addEventListener("keyup", function(event) {

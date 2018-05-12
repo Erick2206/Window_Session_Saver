@@ -1,22 +1,40 @@
 .container{
 	width:300px;
 	height:300px;
-
 }
-.addBar{
-	width: 65%;
-padding: 10px 10px;
+
+.upperBar{
+/*	width: 65%; */
+	padding: 10px 10px;
 	margin: 0 auto;
-	float:left;
-	display: inline-block;
-
+/*	float:left; */
+/*	display: inline-block; */
 }
-#input{
-	width: 100%;
-  	margin: 0 auto;
-		display: inline-block;
 
+#textBox{
+	width: 60%;
+  margin: 0 auto;
+/*	display: inline-block; */
 }
+
+#bttn {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+		padding-left: 20px;
+		font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    width: 30%;
+    margin:0 auto;
+/*		height: 10%; */
+}
+
+#list {
+	display: block;
+	list-style-type: none;
+}
+
 .click{
 	width: 35%;
   	margin-top:5px;
@@ -25,22 +43,14 @@ padding: 10px 10px;
 
 }
 .popup-content{
-	width:80px;
-	padding-top:8px;
-
+ 	padding-top: 8px;
 }
+
 #create{
 	width:80px;
 	height:20px;
 }
-.btn {
-    background-color: DodgerBlue; /* Blue background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-    width:80%;
-    margin:0 auto;
-		height: 10%;
+
+.flag {
+	border: none;
 }
