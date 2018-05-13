@@ -106,7 +106,7 @@ function main(){
 	updateList()
 }
 
-document.querySelector('#bttn').addEventListener('click',main)
+document.querySelector('.bttn').addEventListener('click',main)
 
 // Get the input field
 var input = document.getElementById("textBox");

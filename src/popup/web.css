@@ -9,18 +9,33 @@ body {
 .container{
 	width:300px;
 	height:300px;
+  display: inline-block;
+}
+
+.topArea{
+  height: 15%;
+}
+
+hr{
+border: 0;
+height: 1px;
+background: #333;
+background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
 }
 
 .upperBar{
-/*	width: 65%; */
+	width: 65%;
 	padding: 10px 10px;
 	margin: 0 auto;
-/*	float:left; */
-/*	display: inline-block; */
+	float:left;
+	display: inline;
 }
 
 #textBox{
-	width: 70%;
+	width: 100%;
   margin: 0 auto;
 /*	display: inline-block; */
 }
@@ -86,32 +101,33 @@ body {
 
 /* Source: https://codepen.io/Eliteware/pen/azZEeO */
 .button-7{
-  width:25%;
-  height:7%;
+  width:100px;
+  height:35px;
   border:2px solid #34495e;
-  float:right;
   text-align:center;
   cursor:pointer;
-  position:relative;
+  position:absolute;
+  top: 3%;
+  left: 65%;
   box-sizing:border-box;
   overflow:hidden;
-  margin:0 0 40px 50px;
+  margin:10 0 40px 50px;
 }
 
 .button-7 a{
   font-family:arial;
-  font-size:16px;
+  font-size:14px;
   color:#34495e;
   text-decoration:none;
-  line-height:50px;
+  line-height:35px;
   transition:all .5s ease;
   z-index:2;
   position:relative;
 }
 
 .eff-7{
-  width:140px;
-  height:50px;
+  width:100px;
+  height:35px;
   border:0px solid #34495e;
   position:absolute;
   transition:all .5s ease;
