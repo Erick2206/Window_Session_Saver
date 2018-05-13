@@ -1,3 +1,11 @@
+body {
+  padding:0px;
+  margin:0;
+  font-family:$font;
+  background: #F5F0FF;
+  -webkit-font-smoothing: antialiased;
+}
+
 .container{
 	width:300px;
 	height:300px;
@@ -12,7 +20,7 @@
 }
 
 #textBox{
-	width: 60%;
+	width: 70%;
   margin: 0 auto;
 /*	display: inline-block; */
 }
@@ -53,4 +61,68 @@
 
 .flag {
 	border: none;
+	width: 100%;
+	height: 2em;
+
+}
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:700';
+
+*
+html, body{
+    height:100%;
+    width: 100%;
+}
+
+body {
+  padding:0px;
+  margin:0;
+  font-family:$font;
+  background: #F5F0FF;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Source: https://codepen.io/Eliteware/pen/azZEeO */
+.button-7{
+  width:25%;
+  height:7%;
+  border:2px solid #34495e;
+  float:right;
+  text-align:center;
+  cursor:pointer;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+  margin:0 0 40px 50px;
+}
+
+.button-7 a{
+  font-family:arial;
+  font-size:16px;
+  color:#34495e;
+  text-decoration:none;
+  line-height:50px;
+  transition:all .5s ease;
+  z-index:2;
+  position:relative;
+}
+
+.eff-7{
+  width:140px;
+  height:50px;
+  border:0px solid #34495e;
+  position:absolute;
+  transition:all .5s ease;
+  z-index:1;
+  box-sizing:border-box;
+}
+
+.button-7:hover .eff-7{
+  border:70px solid #34495e;
+}
+
+.button-7:hover a{
+  color:#fff;
 }
