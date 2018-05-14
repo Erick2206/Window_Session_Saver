@@ -29,7 +29,7 @@ function tabStore(tabList){
 
 	if(!isEmpty(tabList)){
 		obj=tabList.KeyPair;
-		flag=document.querySelector('#input').value;
+		flag=document.querySelector('#textBox').value;
 		obj[flag]=KeyPair[flag];
 		KeyPair=obj;
 		browser.storage.local.set({KeyPair}).then(setItem);
@@ -106,7 +106,7 @@ function main(){
 	updateList()
 }
 
-document.querySelector('.bttn').addEventListener('click',main)
+document.getElementById('submitBttn').addEventListener('click',main)
 
 // Get the input field
 var input = document.getElementById("textBox");
@@ -118,6 +118,6 @@ input.addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     // Trigger the button element with a click
-    document.getElementById("bttn").click();
+    document.getElementById("submitBttn").click();
   }
 });
