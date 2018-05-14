@@ -1,5 +1,3 @@
-
-// Developer : RPzinga
 var KeyPair = {};
 var key;
 function reloadTabs(){
@@ -12,7 +10,7 @@ function onCreated(windowInfo) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error during opening new window: ${error}`);
 }
 function setItem(){
 	console.log('ok');
@@ -87,8 +85,9 @@ function getList(data){
 		try{
 
 			obj = data.KeyPair;
-			//console.log(key.valueOf());
+			console.log(key.valueOf());
 			urlArr	= obj[key.valueOf()];
+			console.log(urlArr)
 			var creating = browser.windows.create({
     				url: urlArr
   			});
