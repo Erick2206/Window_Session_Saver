@@ -94,6 +94,7 @@ function getList(data){
   			creating.then(onCreated, onError);
 		}
 		catch(e){
+			alert("There are some invalid URL's");
 			console.log(e);
 		}
 	}
