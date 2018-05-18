@@ -4,6 +4,25 @@ function reloadTabs(){
 	key=this.id;
 	browser.storage.local.get().then(getList);
 }
+
+function getList(data){
+	if(data.KeyPair){
+		try{
+			obj = data.KeyPair;
+			urlArr	= obj[key.valueOf()];
+			var creating = browser.windows.create({
+    				url: urlArr
+  			});
+  			creating.then(onCreated, onError);
+		}
+		catch(e){
+//			alert("There are some invalid URL's");
+			console.log(e);
+		}
+	}
+
+}
+
 //function to check the entry of data in storage
 function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
@@ -63,10 +82,19 @@ function getTabs(){
 	tabList.then(saveTabs)
 }
 
+function checkValueExists(flag){
+	browser.storage.local.get().then(checkValue);
+}
+
+function checkValue(tabs){
+	
+}
+
 function updateList(){
 	var ul = document.getElementById("list");
 	var li = document.createElement("li");
 	flag=document.querySelector('#textBox').value
+	var valueExists = checkValueExists(flag)
 	if(!document.getElementById(flag.valueOf())){
 		var btn = document.createElement("BUTTON");
 		// code to add button with ID as Name entered by User
@@ -80,26 +108,6 @@ function updateList(){
 	}
 }
 
-function getList(data){
-	if(data.KeyPair){
-		try{
-
-			obj = data.KeyPair;
-			console.log(key.valueOf());
-			urlArr	= obj[key.valueOf()];
-			console.log(urlArr)
-			var creating = browser.windows.create({
-    				url: urlArr
-  			});
-  			creating.then(onCreated, onError);
-		}
-		catch(e){
-			alert("There are some invalid URL's");
-			console.log(e);
-		}
-	}
-
-}
 
 function main(){
 	getTabs()
