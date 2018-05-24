@@ -18,6 +18,14 @@ function update(data){
 			ul.appendChild(li);
 		}
 
+		if(count===0){
+			document.getElementById("session_header").innerHtml = "No saved sessions";
+		}
+		else{
+			document.getElementById("session_header").innerHtml = "Saved Sessions:";
+
+		}
+		console.log("Running");
 	}
 
 	catch(e){

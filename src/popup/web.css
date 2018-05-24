@@ -83,6 +83,8 @@ background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
 	width: 100%;
 	height: 2em;
   background: #d1e0e0;
+  font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
+  font-weight: 500;
 }
 
 .flag:hover
