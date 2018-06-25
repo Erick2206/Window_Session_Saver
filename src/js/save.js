@@ -29,10 +29,15 @@ function tabStore(tabList){
 	if(!isEmpty(tabList)){
 		obj=tabList.KeyPair;
 		flag=document.querySelector('#textBox').value;
-		obj[flag]=KeyPair[flag];
-		KeyPair=obj;
-		browser.storage.local.set({KeyPair}).then(setItem);
-		browser.storage.local.set({KeyPair}).then(setItem);
+		if (obj[flag]) {
+			alert("Name already exists");
+		}
+		else{
+			obj[flag]=KeyPair[flag];
+			KeyPair=obj;
+			browser.storage.local.set({KeyPair}).then(setItem);
+			browser.storage.local.set({KeyPair}).then(setItem);
+		}
 	}
 	else{
 		browser.storage.local.set({KeyPair}).then(setItem);
