@@ -1,36 +1,27 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="web.css" />
+    <title></title>
+    <link rel="stylesheet" href="web.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  </head>
+  <body>
     <div class="container">
-      <div class="topArea">
-        <div class="upperBar">
-            <input type="text" id="textBox" placeholder="Session Name" name="fname" >
-<!--            <button  class="bttn-dark" id="bttn"></button> -->
-        </div>
-
-        <div class="button-7">
-          <div class="eff-7"></div>
-            <a href="#" class="bttn" id="submitBttn"> Add </a>
-        </div>
+      <div class="top-area">
+        <img src="../icons/session_saver_icon.png" alt="logo" width="25px" height="25px;">
+          <p class="head">Session Saver</p>
+          <div class="inp">  <input type="text" name="text-box" value="" id="text-box" placeholder="Session Name"> </div>
+          <div id="btn-submit">Add</div>
       </div>
-      <hr>
       <div class="popup-content">
           <h5 id="session_header"></h5>
           <ul id="list">
           </ul>
       </div>
-      </div>
-    <script src="../js/ret.js"></script>
-    <script src="../js/save.js"></script>
-
-</body>
-
+    </div>
+    <script type="text/javascript" src="../js/ret.js"></script>
+    <script type="text/javascript" src="../js/save.js"></script>
+  </body>
 </html>

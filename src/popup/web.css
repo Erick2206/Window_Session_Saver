@@ -1,61 +1,88 @@
-body {
-  padding:0px;
-  margin:0;
-  font-family:$font;
-/*  background: #F5F0FF; */
-  background: #666699;
-  -webkit-font-smoothing: antialiased;
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-
+html, body{
+  width: 290px;
+  min-height: 400px;
+  /*border: 1px solid black;
+  */margin:0px auto;
+}
 .container{
-	width:300px;
-	height:300px;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.top-area{
+  height: 19%;
+  border-bottom: 1px solid black;
+  padding-top: 5px;
+  text-align: center;
+  background-color: #aeb7b3;
+  /*color: white;
+*/}
+img{
+  position: absolute;
+  left:15px;
+}
+.head{
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 130%;
+  text-align: inherit;
+}
+.inp{
+display: inline-block;
+width: 65%;
+}
+.inp > input{
+  margin-top: 6px;
+  width: 100%;
+}
+#btn-submit{
   display: inline-block;
+  width: 25%;
+  margin-right: 10px;
+  float: right;
+  cursor: pointer;
+  border: 1px solid black;
+/*  border-radius: 100%;*/
+  padding:3px;
+  background-color: #373a36;
+  color:white;
+  margin-top: 5px;
+  text-align: inherit;
+  transition: 250ms background ease-in-out ;
 }
-
-.topArea{
-  height: 15%;
+#btn-submit:hover{
+  color: black;
+  background-color: #e1efe6;
 }
-
-hr{
-border: 0;
-height: 1px;
-background: #333;
-background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
-background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
-background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
-background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+.popup-content{
+  background-color: #e1efe6;
+  min-height: 81%;/*
+  padding: 10px 10px;*/
+  z-index: -1;/*
+  overflow-y: scroll;*/
 }
+/*li{
+  margin-top: 2px;
+  list-style: none;/*
+  background-color: white;
+  height: 25px;
+  padding: 2px 2px 2px 8px;
+  border-radius: 5px;
+  cursor: pointer;
 
-.upperBar{
-	width: 65%;
-	padding: 10px 10px;
-	margin: 0 auto;
-	float:left;
-	display: inline;
 }
-
-#textBox{
-	width: 100%;
-  margin: 0 auto;
-/*	display: inline-block; */
-}
-
-#bttn {
-    background-color: DodgerBlue; /* Blue background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 12px 16px; /* Some padding */
-		padding-left: 20px;
-		font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-    width: 30%;
-    margin:0 auto;
-/*		height: 10%; */
-}
-
+li:hover{
+  background-color: white;
+}*/
 #list {
-	display: block;
+	display: block
+  width: 100%;
 /*	list-style-type: none; */
   padding-left: 0;
 }
@@ -66,89 +93,31 @@ background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
 /*  	margin-left:10px;
 */		float: right;
 }
-
-/*
-.popup-content{
- 	padding-top: 8px;
-}
-*/
-
-#create{
-	width:80px;
-	height:20px;
-}
-
 .flag {
 	border: none;
 	width: 100%;
-	height: 2em;
+	/*height: 2em;
   background: #d1e0e0;
   font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
-  font-weight: 500;
+ /* font-weight: 500;*/
+  margin-top: 2px;
+  background-color: #e1efe6;
+  list-style: none;/*
+  background-color: white;*/
+  height: 25px;
+  padding: 2px 2px 2px 8px;
+  border-radius: 5px;
 }
 
 .flag:hover
 {
   background-image:none;
-  background-color:#ccffcc;
+  background-color:white;
+}
+button{
+  decoration: none;
 }
 
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:700';
-
-*
-html, body{
-    height:100%;
-    width: 100%;
-}
-
-body {
-  padding:0px;
-  margin:0;
-  font-family:$font;
-  background: #d1e0e0;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Source: https://codepen.io/Eliteware/pen/azZEeO */
-.button-7{
-  width:100px;
-  height:35px;
-  border:2px solid #34495e;
-  text-align:center;
-  cursor:pointer;
-  position:absolute;
-  top: 3%;
-  left: 65%;
-  box-sizing:border-box;
-  overflow:hidden;
-  margin:10 0 40px 50px;
-}
-
-.button-7 a{
-  font-family:arial;
-  font-size:14px;
-  color:#34495e;
-  text-decoration:none;
-  line-height:35px;
-  transition:all .5s ease;
-  z-index:2;
-  position:relative;
-}
-
-.eff-7{
-  width:100px;
-  height:35px;
-  border:0px solid #34495e;
-  position:absolute;
-  transition:all .5s ease;
-  z-index:1;
-  box-sizing:border-box;
-}
-
-.button-7:hover .eff-7{
-  border:70px solid #34495e;
-}
-
-.button-7:hover a{
-  color:#fff;
-}
+/*
+ test 1  d #c9f0ee u #e4ebe5
+*/

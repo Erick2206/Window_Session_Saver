@@ -25,10 +25,9 @@ function isEmpty(obj) {
     return true;
 }
 function tabStore(tabList){
-
 	if(!isEmpty(tabList)){
 		obj=tabList.KeyPair;
-		flag=document.querySelector('#textBox').value;
+		flag=document.querySelector('#text-box').value;
 		if (obj[flag]) {
 			alert("Name already exists");
 		}
@@ -55,7 +54,7 @@ function saveTabs(tabs){
 		}
 	}
 
-	flag=document.querySelector('#textBox').value;
+	flag=document.querySelector('#text-box').value;
 	//console.log(typeof(flag));
 	KeyPair[flag] = arr;
 
@@ -81,8 +80,7 @@ function checkValue(tabObj){
 		console.log("key is ",key);
 		console.log("flag is ",flag);
 
-		if(key===flag)
-		{
+		if(key===flag){
 			return true;
 		}
 	}
@@ -94,7 +92,7 @@ function checkValue(tabObj){
 function updateList(){
 		var ul = document.getElementById("list");
 		var li = document.createElement("li");
-		flag=document.querySelector('#textBox').value
+		flag=document.querySelector('#text-box').value
 
 /*
 		browserData = checkValueExists(flag)
@@ -134,6 +132,16 @@ function updateList(){
 			btn.onclick = reloadTabs;
 			li.appendChild(btn);
 			ul.appendChild(li);
+			//var textNode = document.createTextNode(flag);
+			// var para = document.createElement("P");
+			// para.appendChild(textNode)
+			// li.appendChild(para);
+			// li.id = 'addEvent';
+			// console.log(li.id);
+			// document.getElementById('addEvent').addEventListener('click', () => {
+			// 	reloadTabs();
+			// });
+			// ul.appendChild(li);
 		}
 	}
 
@@ -141,9 +149,11 @@ function updateList(){
 		if(e instanceof ValueExistsException)
 			alert("Session with this Name exists!");
 		else{
-		console.log(e);
+				console.log(e);
 		}
 	}
+
+
 }
 
 function getList(data){
@@ -172,10 +182,10 @@ function main(){
 	updateList()
 }
 
-document.getElementById('submitBttn').addEventListener('click',main)
+document.getElementById('btn-submit').addEventListener('click',main);
 
 // Get the input field
-var input = document.getElementById("textBox");
+var input = document.getElementById("text-box");
 
 // Execute a function when the user releases a key on the keyboard
 input.addEventListener("keyup", function(event) {
@@ -184,6 +194,6 @@ input.addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     // Trigger the button element with a click
-    document.getElementById("submitBttn").click();
+    document.getElementById("btn-submit").click();
   }
 });
