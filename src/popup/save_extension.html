@@ -1,27 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="web.css">
+<html>
+    <head>
+    <meta charset="UTF-8"/>
+    <html lang="en"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <div class="top-area">
-        <img src="../icons/session_saver_icon.png" alt="logo" width="25px" height="25px;">
-          <p class="head">Session Saver</p>
-          <div class="inp">  <input type="text" name="text-box" value="" id="text-box" placeholder="Session Name"> </div>
-          <div id="btn-submit">Add</div>
-      </div>
-      <div class="popup-content">
-          <h5 id="session_header"></h5>
-          <ul id="list">
-          </ul>
-      </div>
-    </div>
-    <script type="text/javascript" src="../js/ret.js"></script>
-    <script type="text/javascript" src="../js/save.js"></script>
-  </body>
-</html>
+    <link rel="stylesheet" href="web.css">
+</head>
+    <body>
+        <div class="container popup">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="popup_logo"></div>
+                    <h3 class="popup_title">
+                        Session Saver
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8 ">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            placeholder="Session Name" 
+                            aria-label="Session name" 
+                            aria-describedby="session name"
+                        >
+                    </div>
+                </div>
+                <div class="col-4">
+                    <button 
+                        type="button" 
+                        class="btn btn-dark btn-add"
+                    >Add</button>
+                </div>
+            </div>
+
+            <hr>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tabList">
+                    <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+                    <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+                    <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+                    <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+                </div>
+            </div>
+        </div>
+        
+            <!-- <script type="text/javascript" src="../js/ret.js"></script> -->
+            <script type="text/javascript" src="../js/save.js"></script>    
+        </body>
+        </html>
+        <!-- onclick="onClickAdd(event)" -->
