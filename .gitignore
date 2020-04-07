@@ -1,2 +1,4 @@
 *.swo
 *.swp
+
+/src1/node_modules
