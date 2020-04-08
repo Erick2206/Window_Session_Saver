@@ -7,13 +7,12 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
 
 
-.body{
-  overflow: hidden;
-  scroll: hidden;
+body{
+  min-height: 300px; 
+  width: 300px;
 }
 
 .popup{
-  width: 350px;
   /* height: 500px; */
   /* border: 1px solid black; */
   padding-top: 10px;
@@ -32,4 +31,19 @@
 .popup_title{
   display: inline-block;
   padding-left: 25px;
+}
+
+.tabList{
+  overflow-x: hidden;
+  /* padding-left: 15px; */
+}
+
+hr{
+  margin-bottom: 5px;
+}
+
+.list-group-item{ 
+  padding-left: 10px;
+  border: none;
+  padding: 5px;
 }
