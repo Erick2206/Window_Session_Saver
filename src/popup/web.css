@@ -42,8 +42,16 @@ hr{
   margin-bottom: 5px;
 }
 
+.btin-add{
+  margin-left: 10px;
+}
+
 .list-group-item{ 
   padding-left: 10px;
   border: none;
   padding: 5px;
+}
+
+.no_session{
+  text-align: center;
 }
