@@ -1,28 +1,21 @@
 {
-
- 	 "manifest_version": 2,
-  	 "name": "Window Session Saver",
-  	 "version": "0.2",
+  "manifest_version": 2,
+  "name": "Window Session Saver",
+  "version": "0.2",
 
   "description": "Saves the window tabs so that they could be used later.",
   "homepage_url": "https://github.com/Erick2206/Window_Session_Saver",
 
   "icons": {
-
     "48": "icons/session_saver_icon.png"
   },
 
-  "permissions": [
-      "*://developer.mozilla.org/*",
-      "tabs",
-      "storage"
-    ],
+  "permissions": ["*://developer.mozilla.org/*", "tabs", "storage"],
 
   "browser_action": {
-      "default_icon": "icons/session_saver_icon.png",
-      "default_title": "Session Saver",
-      "default_popup": "popup/save_extension.html",
-      "browser_style": true
-    }
-
+    "default_icon": "icons/session_saver_icon.png",
+    "default_title": "Session Saver",
+    "default_popup": "popup/save_extension.html",
+    "browser_style": true
+  }
 }
