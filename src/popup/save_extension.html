@@ -1,36 +1,49 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="web.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
+    <meta charset="UTF-8"/>
+    <html lang="en">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="web.css">
 </head>
+    <body>
+        <div class="container popup">
+            <div class="row">
+                <div class="col-md-12 popup_logo_title_wrapper">
+                    <div class="popup_logo"></div>
+                    <h3 class="popup_title">
+                        Session Saver
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-9 col-wrapper">
+                    <div class="input-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Session Name"
+                            aria-label="Session name"
+                            aria-describedby="session name"
+                            name="sessionName"
+                        >
+                    </div>
+                </div>
+                <div class="col-3">
+                    <button
+                        type="button"
+                        class="btn btn-dark btn-add"
+                    >Add</button>
+                </div>
+            </div>
 
-<body>
-    <div class="container">
-      <div class="topArea">
-        <div class="upperBar">
-            <input type="text" id="textBox" placeholder="Session Name" name="fname" >
-<!--            <button  class="bttn-dark" id="bttn"></button> -->
+            <hr>
+
         </div>
-
-        <div class="button-7">
-          <div class="eff-7"></div>
-            <a href="#" class="bttn" id="submitBttn"> Add </a>
-        </div>
-      </div>
-      <hr>
-      <div class="popup-content">
-          <h5 id="session_header"></h5>
-          <ul id="list">
-          </ul>
-      </div>
-      </div>
-    <script src="../js/ret.js"></script>
-    <script src="../js/save.js"></script>
-
-</body>
-
+         
+        <div class="tabList"></div>
+        <script type="text/javascript" src="../js/save.js"></script>
+        <script type="text/javascript" src="../js/ret.js"></script>
+    </body>
 </html>

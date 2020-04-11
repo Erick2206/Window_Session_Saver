@@ -1,2 +1,8 @@
 *.swo
 *.swp
+
+/src1/node_modules
+
+/src/node_modules
+
+/src/yarn.lock
