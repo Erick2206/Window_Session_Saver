@@ -1,5 +1,7 @@
-var refBtn = document.getElementsByClassName("btn-add")[0];
-var refLocalStorage = browser.storage.local;
+const refBtn = document.getElementsByClassName("btn-add")[0];
+const refLocalStorage = browser.storage.local;
+const refInput = document.getElementsByClassName("form-control")[0]; 
+const refFeedback = document.getElementsByClassName("feedback")[0];
 
 function reloadTabs() {
   const value = this.innerHTML;
@@ -36,15 +38,40 @@ document.addEventListener("DOMContentLoaded", () => {
         refLocalStorage
           .get()
           .then((savedTabs) => {
-            const sessionName = document.getElementsByClassName(
-              "form-control"
-            )[0].value;
+            const sessionName = refInput.value;
+
+            if(sessionName === "" || sessionName === null || sessionName === undefined) {
+              refInput.classList.add("is-invalid");
+              refFeedback.innerHTML = "Please enter session name";
+              
+              refInput.addEventListener('change', (event) => {
+                if(refInput.classList.contains('is-invalid')){
+                  refInput.classList.remove('is-invalid');
+                  refFeedback.innerHTML = ""; 
+                }
+              })
+
+              refInput.removeEventListener('change');
+              return;
+            }
+
             if (!isEmpty(savedTabs)) {
               const flag = Object.keys(savedTabs).filter(
                 (item) => item === sessionName
               );
               if (flag.length > 0) {
-                return console.log("Name already exists");
+                refInput.classList.add("is-invalid");
+                refFeedback.innerHTML = "Name already exists";
+                
+                refInput.addEventListener('change', (event) => {
+                  if(refInput.classList.contains('is-invalid')){
+                    refInput.classList.remove('is-invalid');
+                    refFeedback.innerHTML = ""; 
+                  }
+                })
+
+                refInput.removeEventListener('change');               
+                return; 
               }
             } else {
               document.getElementsByClassName("tabList")[0].innerHTML = "";
