@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Window Session Saver",
-  "version": "0.3",
+  "version": "1.1",
 
   "description": "Saves the window tabs so that they could be used later.",
   "homepage_url": "https://github.com/Erick2206/Window_Session_Saver",
