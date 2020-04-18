@@ -1,7 +1,6 @@
 body {
   min-height: 300px;
   max-height: 400px;
-  /* overflow-y: scroll; */
   width: 280px;
   background-color: #f7f7f7;
 }
