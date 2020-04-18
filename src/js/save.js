@@ -5,12 +5,10 @@ const refFeedback = document.getElementsByClassName("feedback")[0];
 
 function reloadTabs() {
   const value = this.innerText;
-  console.log("value", value);
   refLocalStorage
     .get()
     .then((tabList) => {
       if (tabList) {
-        console.log("vall", tabList[value]);
         browser.windows
           .create({
             url: tabList[value],
@@ -47,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (
               sessionName === "" ||
               sessionName === null ||
-              sessionName === undefined
+              typeof sessionName === undefined
             ) {
               refInput.classList.add("is-invalid");
               refFeedback.innerHTML = "Please enter session name";
