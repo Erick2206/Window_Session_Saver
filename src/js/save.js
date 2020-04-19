@@ -92,4 +92,11 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((err) => console.log(err));
   });
+
+  refInput.addEventListener("keyup", (event) => {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      refBtn.click();
+    }
+  });
 });
